@@ -30,7 +30,7 @@ class Test(unittest.TestCase):
         arr = [4, 1, 2, 5]
         answer = moving_zeroes(arr)
 
-        self.assertEqual(len(answer), len(arr)) 
+        self.assertEqual(len(answer), len(arr))
 
         for x in answer:
             self.assertTrue(x in arr)
@@ -40,16 +40,16 @@ class Test(unittest.TestCase):
         arr = [0, 0, 0, 0, 0]
         answer = moving_zeroes(arr)
 
-        self.assertEqual(len(answer), len(arr)) 
+        self.assertEqual(len(answer), len(arr))
 
         for x in answer:
             self.assertTrue(x == 0)
 
     def test_moving_zeroes_return_value_5(self):
-        arr = [0, 0, 0, 0, 3, 2, 1] 
+        arr = [0, 0, 0, 0, 3, 2, 1]
         answer = moving_zeroes(arr)
 
-        self.assertEqual(len(answer), len(arr)) 
+        self.assertEqual(len(answer), len(arr))
 
         for x in answer[:3]:
             self.assertTrue(x in arr)
