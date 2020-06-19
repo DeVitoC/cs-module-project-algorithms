@@ -2,6 +2,7 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+from collections import Counter
 def single_number(arr):
     # Your code here
     index = 0
@@ -14,6 +15,7 @@ def single_number(arr):
         else:
             index += 1
     return arr[0]
+
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

@@ -3,14 +3,17 @@ Input: a List of integers
 Returns: a List of integers
 '''
 import math
+import timeit
 
 def product_of_all_other_numbers(arr):
     # Your code here
+    start = timeit.default_timer()
     arr2 = [0] * len(arr)
     for i in range(len(arr)):
-        arr2[i] = math.prod(list(arr[0:i] + arr[i+1:]))
+        arr2[i] = math.prod(list(arr[:i] + arr[i+1:]))
+    end = timeit.default_timer()
+    print(f"{end - start} seconds")
     return arr2
-
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
